@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="head">
+            <h1>Travel</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section id="home">
+            <div class="videos">
+                <video id="vid1" src="first vid.mp4" muted loop autoplay></video>
+                <video id="vid2" src="second vid.mp4" muted loop autoplay></video>
+                <video id="vid4" src="fourth vid.mp4" muted loop autoplay></video>
+            </div>
+            <h1> <span>Wonderful.</span> <br> Days To Spent</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit veritatis, a voluptates vel similique pariatur explicabo earum deleniti accusamus dignissimos autem quam ipsa nisi, eveniet officiis. Quo mollitia eius corrupti rem nemo minima laboriosam ducimus ratione nihil, tempora porro nisi exercitationem dolore doloribus atque dolorum magnam voluptatibus deleniti harum est.</p>
+            <div class="icons">
+                <ion-icon class="iconn" style="padding-bottom: 15px;" name="logo-facebook"></ion-icon>
+                <ion-icon class="iconn" style="padding-bottom: 15px;" name="logo-instagram"></ion-icon>
+                <ion-icon class="iconn" style="padding-bottom: 15px;" name="logo-tiktok"></ion-icon>
+                <ion-icon class="iconn" style="padding-bottom: 15px;" name="logo-linkedin"></ion-icon>
+            </div>
+        </section>
+        <div class="dots">
+            <div id="first" class="dot-1"></div>
+            <div id="second" class="dot-1"></div>
+            <div id="fourth" class="dot-1"></div>
+        </div>
+        <!-- javascript -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            let first = document.getElementById("first")
+            let second = document.getElementById("second")
+            let fourth = document.getElementById("fourth")
+            
+            let vid1 = document.getElementById("vid1")
+            let vid2 = document.getElementById("vid2")
+            let vid3 = document.getElementById("vid3")
+            let vid4 = document.getElementById("vid4")
+            
+            let head = document.getElementById("head")
+            let home = document.getElementById("home")
+
+            first.onclick = function () {
+                vid1.style.display = "block"
+                vid2.style.display = "none"
+                vid4.style.display = "none"
+                first.style.backgroundColor = "white"
+                fourth.style.backgroundColor = "white"
+            }
+            second.onclick = function () {
+                vid1.style.display = "none"
+                vid2.style.display = "block"
+                vid4.style.display = "none"
+                first.style.backgroundColor = "white"
+                second.style.backgroundColor = "white"
+            }
+            fourth.onclick = function () {
+                vid1.style.display = "none"
+                vid2.style.display = "none"
+                vid4.style.display = "block"
+                first.style.backgroundColor = "white"
+                second.style.backgroundColor = "white"
+                fourth.style.backgroundColor = "white"
+            }
+        </script>
+    </body>
+</html>
